@@ -35,9 +35,8 @@ export default {
       evt.preventDefault();
       if (this.newmessages) {
         const data = {
-          id: this.$store.state.currentUser.userId,
           message: this.newmessages,
-          name: this.$store.state.currentUser.lname,
+          name: this.$store.state.currentUser.name,
           time: Date.now(),
           recieverId: this.$store.state.currentUser.userId
         };

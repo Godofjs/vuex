@@ -92,11 +92,9 @@ const store = new Vuex.Store({
     },
   
     //get messages from firestore
-    async getMessages({ commit, state }) {
+    async getMessages({ commit }) {
       const messages = [];
-     const uid = state.currentUser.userId;
-     console.log(uid)
-      let convoRef = db.collection("messages").where('id', "==", uid);
+      let convoRef = db.collection("messages");
       let convos = await convoRef.get();
       convos.forEach(doc => {
         messages.push(doc.data())
@@ -106,8 +104,7 @@ const store = new Vuex.Store({
     //get admin  messages from firestore
     async getAdminMessages({ commit }) {
       const messages = [];
-     const uid = state.currentUser.userId;
-      let convoRef = db.collection("adminmessages").where('recieverId', "==", uid);
+      let convoRef = db.collection("adminmessages");
       let convos = await convoRef.get();
       convos.forEach(doc => {
         messages.push(doc.data())
