@@ -1,4 +1,4 @@
-# gainsville
+# repository
 
 ## Project setup
 ```

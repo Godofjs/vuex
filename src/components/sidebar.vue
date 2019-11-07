@@ -9,7 +9,7 @@
              <v-icon>mdi-dots-vertical</v-icon>
           <v-list-item-title>Show/Hide</v-list-item-title>
       </v-list-item>
-       <v-list-item to="/studentdashboard">
+       <v-list-item to="/userdashboard">
           <v-list-item-action>
             <v-icon>mdi-view-dashboard</v-icon>
           </v-list-item-action>
@@ -17,43 +17,17 @@
             <v-list-item-title>Dashboard</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-         <v-list-item to="/home" >
-          <v-list-item-action>
-            <v-icon>mdi-home</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Home</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item to='/studentprofile'>
+        <v-list-item to='/userprofile'>
         <v-list-item-action >
           <v-icon>mdi-account</v-icon>
         </v-list-item-action>
         <v-list-item-content>Profile</v-list-item-content>
-      </v-list-item>
-      <v-list-item to='/listofbooks'>
-        <v-list-item-action >
-          <v-icon>mdi-book</v-icon>
-        </v-list-item-action>
-        <v-list-item-content>stationaries</v-list-item-content>
-      </v-list-item>
-      <v-list-item to='/payment'>
-        <v-list-item-action>
-          <v-icon>mdi-cash</v-icon>
-        </v-list-item-action>
-        <v-list-item-content>Payments</v-list-item-content>
       </v-list-item>
       <v-list-item to="/complaints">
         <v-list-item-action>
           <v-icon>mdi-chat</v-icon>
         </v-list-item-action>
         <v-list-item-content>Suggestions and Complaints</v-list-item-content>
-      </v-list-item>
-      <v-list-item to="/info">
-        <v-list-item-action>
-          <v-icon>info</v-icon>
-        </v-list-item-action>
-        <v-list-item-content>Informations</v-list-item-content>
       </v-list-item>
       <v-list-item @click="logOut">
         <v-list-item-action>
@@ -78,7 +52,7 @@ return {
  methods: {
  logOut() {
   auth.signOut().then(() => {
-    this.$router.push('/login');
+    this.$router.push('/register');
   })
  }
  }

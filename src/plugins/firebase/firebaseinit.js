@@ -5,13 +5,14 @@ import 'firebase/auth'
 import 'firebase/storage'
 import 'firebase/'
 const firebaseConfig = {
-  apiKey: "AIzaSyAfyy6_LZU0-NoeDYmpDB4F1Xt3VdeNPgw",
-  authDomain: "gainsville-4e320.firebaseapp.com",
-  databaseURL: "https://gainsville-4e320.firebaseio.com",
-  projectId: "gainsville-4e320",
-  storageBucket: "gainsville-4e320.appspot.com",
-  messagingSenderId: "89788900648",
-  appId: "1:89788900648:web:ed72b6b6d288d8d3"
+  apiKey: "AIzaSyCcX_VpGkR6I4wAoyMxZWwAt6pGfIkRTzE",
+  authDomain: "vuex-tutorial-a131a.firebaseapp.com",
+  databaseURL: "https://vuex-tutorial-a131a.firebaseio.com",
+  projectId: "vuex-tutorial-a131a",
+  storageBucket: "vuex-tutorial-a131a.appspot.com",
+  messagingSenderId: "55771917877",
+  appId: "1:55771917877:web:aa95e073937ccc003e0b7c",
+  measurementId: "G-ENH6Y70Q47"
 };
 firebase.initializeApp(firebaseConfig);
 export const db = firebase.firestore();

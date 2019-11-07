@@ -60,7 +60,6 @@ export default {
   position: absolute;
   width: 95%;
   bottom: 0px;
-  height: 5%;
 }
 .bn {
   border-radius: 50px;

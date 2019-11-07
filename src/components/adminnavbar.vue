@@ -1,6 +1,6 @@
 <template>
     <v-app-bar app color="white" elevate-on-scroll>
-      <v-toolbar-title>GAINSVILLE ADMIN</v-toolbar-title>
+      <v-toolbar-title>REPOSITORY ADMIN</v-toolbar-title>
       <div class="flex-grow-1"></div>
       <v-btn icon>
         <v-icon>mdi-magnify</v-icon>

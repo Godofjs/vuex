@@ -27,6 +27,12 @@ import { mapState } from "vuex";
 import createmessage from "@/components/admincreatemessage.vue";
 export default {
   name: "complaints",
+  data() {
+    return {
+      adminsMessages: this.$store.dispatch("getAdminMessages"),
+      userMessages: this.$store.dispatch("getMessages")
+    }
+  },
   props: ["name"],
   components: {
     createmessage
@@ -34,8 +40,10 @@ export default {
   computed: {
     ...mapState([ 'adminMessages', 'messages']),
     reload() {
-      this.$store.dispatch("getAdminMessages");
-      this.$store.dispatch("getMessages");
+      return {
+        adminsMessages,
+        userMessages
+      }
     }
   },
   created() {

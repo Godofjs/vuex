@@ -1,9 +1,9 @@
 <template>
   <v-app-bar app clipped-left color="green" class="mb-auto">
-    <v-toolbar-title>GAINSVILLE SCHOOLS</v-toolbar-title>
+    <v-toolbar-title>REPOSITORY</v-toolbar-title>
     <div class="flex-grow-1"></div>
     <v-btn to="/register" v-if="!currentUser">register</v-btn>
-    <v-container class="circle" v-if="currentUser" ><v-icon>mdi-camera</v-icon></v-container>
+    <v-btn to="/admin" >Admin dashboard</v-btn>
   </v-app-bar>
 </template>
 <script>
