@@ -16,7 +16,6 @@
 </template>
 <script>
  import { mapState } from "vuex";
-import { METHODS } from 'http';
  export default {
      data: () => {
          return {
@@ -27,15 +26,15 @@ import { METHODS } from 'http';
          ...mapState(["usersCollection"]),  
      },
      beforeMount() {
-          this.$store.dispatch("getuserCollection");
+          this.$store.dispatch("getUserCollection");
           },
-          methods: {
-           hide() {
-               const hide = document.getElementsByClassName("hide");
-               hide.style.display
+        //   methods: {
+        //    hide() {
+        //        const hide = document.getElementsByClassName("hide");
+        //        hide.style.display
             
-           } 
-          },
+        //    } 
+        //   },
  }
 </script>
 <style>

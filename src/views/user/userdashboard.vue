@@ -21,6 +21,9 @@
     },
   computed: { 
     ...mapState(["currentUser"]),
+    down() {
+     console.log(this.$store.state.currentUser.name)
+    }
   },
   methods: {
     

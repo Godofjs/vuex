@@ -27,7 +27,7 @@ const store = new Vuex.Store({
     setUserProfile(state, val) {
       state.userProfile = val;
     },
-    setUsersCollection(state, val) {
+    setusersCollection(state, val) {
       state.usersCollection = val;
     },
     setmessage(state, messages) {

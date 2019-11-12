@@ -1,7 +1,7 @@
 <template>
   <div class="mt-2">
     <p v-if="errortext">You have to send an actual message.</p>
-    <v-form @submit="createmessage">
+    <v-form @submit="createmessage" ref="form">
       <v-row class="text ml-6 mt-6 mb-n1">
         <v-textarea
           auto-grow
@@ -36,7 +36,7 @@ export default {
       if (this.newmessages) {
         const data = {
           message: this.newmessages,
-          name: this.$store.state.currentUser.name,
+          // name: this.$store.state.currentUser.name,
           time: Date.now(),
           recieverId: this.$store.state.currentUser.userId
         };
@@ -44,8 +44,7 @@ export default {
           .doc()
           .set(data)
           .then(() => {
-            this.newmessages == null;
-            this.errortext == null;
+            this.$refs.form.reset()
           })
           
       } else {
