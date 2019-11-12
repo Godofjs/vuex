@@ -92,8 +92,9 @@ const store = new Vuex.Store({
     },
   
     //get messages from firestore
-    async getMessages({ commit }) {
+    async getMessages({ commit, state }) {
       const messages = [];
+      console.log(state.currentUser.userId)
       let convoRef = db.collection("messages");
       let convos = await convoRef.get();
       convos.forEach(doc => {
