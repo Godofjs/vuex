@@ -34,7 +34,6 @@ export default {
     createmessage(evt) {
       evt.preventDefault();
       if (this.newmessages) {
-        console.log(this.$store.state.currentUser.name)
         const data = {
           id: this.$store.state.currentUser.userId,
           message: this.newmessages,
