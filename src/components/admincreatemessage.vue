@@ -36,7 +36,7 @@ export default {
       if (this.newmessages) {
         const data = {
           message: this.newmessages,
-          // name: this.$store.state.currentUser.name,
+          name: this.$store.state.currentUser.name,
           time: Date.now(),
           recieverId: this.$store.state.currentUser.userId
         };
